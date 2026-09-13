@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mikan Options</title>
+  <link rel="stylesheet" href="board-style.css">
+  <link rel="stylesheet" href="content.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="dark-mode-toggle" id="dark-mode-btn" title="Toggle dark mode">🌙</button>
+      <h1>🍊 Mikan <span class="kanji">見間</span></h1>
+      <p>Japanese Immersion Time Tracker</p>
+    </div>
+	<h2 class="stat-value">Options</h2>
+    <div class="options-grid">
+      <div class="stat-card"  title="Input the complete URL to an online JSON file that can be read from and written to.">
+        <div class="stat-label">Points JSON URL</div>
+		<div class="stat-value"><input id="urlInput" type="text" size="80"></div>
+      </div>
+      <div class="stat-card" title="How often points will be rewarded for continuous Japanese viewing">
+        <div class="stat-label">Points Reward Frequency</div>
+        <div class="stat-value" id="week-stat"><input id="pointsInput" type="text" size="2"> points every <input id="minutesInput" type="text" size="2"> minutes</div>
+      </div>
+    </div>
+	<div class="header">
+		<button class="save-button" id="save-btn">Save options</button>
+	</div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -98,8 +98,8 @@
     }
     
     .btn-dashboard {
-      display: block;
-      width: 100%;
+      display: inline;
+      width: 78%;
       background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
       border: none;
       border-radius: 10px;
@@ -111,8 +111,28 @@
       transition: all 0.2s;
       margin-bottom: 16px;
     }
-    
+
     .btn-dashboard:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+    }
+
+    .btn-options {
+      display: inline;
+      width: 20%;
+      background: linear-gradient(135deg, #f9c7a5 0%, #eab59b 100%);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 16px;
+    }
+
+    .btn-options:hover {
       transform: translateY(-1px);
       box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
     }
@@ -360,6 +380,10 @@
 
   <button class="btn-dashboard" id="dashboard-btn">
     📊 Open Dashboard
+  </button>
+
+  <button class="btn-options" id="options-btn">
+    ⚙️
   </button>
 
   <div class="card status-card inactive" id="status-card">
