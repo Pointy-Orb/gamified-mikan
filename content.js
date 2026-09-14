@@ -486,7 +486,7 @@ const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 
 		const videoElement = findActiveVideo();
 
-		if (videoElement) {
+		if (videoElement && videoElement.readyState > 0) {
 			attachVideoListeners(videoElement);
 			lastTime = video.currentTime;
 
@@ -540,6 +540,9 @@ const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 		initializeTracker();
 		setupShortsObserver();
 		browserAPI.storage.local.get(['pointsReward', 'minuteFrequency', 'pointsURL'], (result) => {
+			if (!result.pointsReward || !result.minuteFrequency || !result.pointsURL) {
+				return;
+			}
 			pointsReward = Number(result.pointsReward);
 			minuteInterval = Number(result.minuteFrequency);
 			pointsURL = result.pointsURL;

@@ -366,7 +366,7 @@ function init() {
 
 	document.getElementById('export-btn').addEventListener('click', () => {
 		const days = Object.keys(watchData);
-		let csv = "";
+		let csv = "Date,Time immersing (seconds),\n";
 		for (const day of days) {
 			csv += day + "," + (watchData[day]?.totalSeconds || 0) + ",\n";
 		}
